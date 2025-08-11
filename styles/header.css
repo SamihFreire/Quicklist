@@ -1,7 +1,7 @@
 header{
     display: grid;
     justify-items: center;
-    margin-top: 1.562rem;
+    margin-block: 1.562rem 2rem;
 
     & #logo {
         display: flex;
