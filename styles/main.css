@@ -44,5 +44,64 @@ main {
                 background-color: var(--color-brand-hover);
             }
         }
+
+        & .shopping-list {
+            display: grid;
+            gap: 0.75rem;
+            margin-top: 2.5rem;
+
+            & .checkbox-wrapper {
+
+                position: relative;
+                height: 2.75rem;
+                display: flex;
+                gap: 0.75rem;
+                align-items: center;
+                background-color: var(--background-secondary);
+                border-radius: 0.75rem;
+                color: var(--content-secondary);
+                padding-inline: 0.75rem;
+                
+                & [type="checkbox"] {
+                    all: unset;
+                    position: absolute;
+                    inset: 0;
+                    width: 93%;
+                }
+                
+                & .checkbox-image {
+                    width: 1rem;
+                    height: 1rem;
+    
+                    background-image: url(../assets/icons/checkbox-default.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                & .delete-icon {
+                    height: 2rem;
+                    width: 2rem;
+                    background-image: url(../assets/icons/delete.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                & label {
+                    width: 33.187rem;
+                }
+    
+                &:hover, &:focus-within {
+                    cursor: pointer;
+                }
+
+                &:hover .checkbox-image {
+                    background-image: url(../assets/icons/checkbox-hover.svg);
+                }
+
+                &:has(:checked) .checkbox-image {
+                    background-image: url(../assets/icons/checkbox-selected.svg);
+                }
+            }
+        }
     }
 }
