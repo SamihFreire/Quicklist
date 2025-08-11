@@ -49,6 +49,9 @@ html {
 
 body {
     background-color: var(--background-primary);
+    width: 39.187rem;
+    display: grid;
+    margin-inline: auto;
 }
 
 h1 {
@@ -60,6 +63,8 @@ h1 {
 a {
     font-size: var(--fs-link);
     line-height: 1.6;
+    text-decoration: none;
+    color: var(--color-brand);
 }
 
 

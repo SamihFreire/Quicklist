@@ -1,0 +1,21 @@
+header{
+    display: grid;
+    justify-items: center;
+    margin-top: 1.562rem;
+
+    & #logo {
+        display: flex;
+        justify-content: center;
+        width: 9.719rem;
+        height: 2.5rem;
+    }
+
+    & div {
+        width: 100%;
+        margin-top: 3.875rem;
+
+        & h1 {
+            line-height: 2.5;
+        }
+    }
+}
