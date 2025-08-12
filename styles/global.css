@@ -67,4 +67,8 @@ a {
     color: var(--color-brand);
 }
 
+input {
+    font-size: var(--fs-label);
+}
+
 

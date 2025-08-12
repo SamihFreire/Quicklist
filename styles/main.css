@@ -11,7 +11,7 @@ main {
                 padding-inline: 1.125rem;
                 border: 2px solid var(--border-primary);
                 border-radius: 0.75rem;
-                outline: none;
+                outline: none; /* Remove o outline, ao clicar no input é gerado */
             }
 
             & input::placeholder {
@@ -51,7 +51,7 @@ main {
             margin-top: 2.5rem;
 
             & .checkbox-wrapper {
-
+                
                 position: relative;
                 height: 2.75rem;
                 display: flex;
@@ -60,7 +60,7 @@ main {
                 background-color: var(--background-secondary);
                 border-radius: 0.75rem;
                 color: var(--content-secondary);
-                padding-inline: 0.75rem;
+                padding-left: 0.75rem;
                 
                 & [type="checkbox"] {
                     all: unset;
@@ -80,7 +80,7 @@ main {
 
                 & .delete-icon {
                     height: 2rem;
-                    width: 2rem;
+                    width: 2.5rem;
                     background-image: url(../assets/icons/delete.svg);
                     background-repeat: no-repeat;
                     background-position: center;

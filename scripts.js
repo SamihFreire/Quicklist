@@ -11,6 +11,16 @@ form.onsubmit = (event) => {
     input.value = "";
 }
 
+window.addEventListener("click", (event) => {
+    //console.log(event); //Visualizo toda a estrutura
+    //console.log(event.target); //Visualizo o elemento em especifico
+    //console.log(event.target.offsetParent); //Visualizo seu nó pai
+
+    if(event.target.className == "delete-icon") {
+        event.target.offsetParent.remove(); //Deleta o nó pai
+    }
+})
+
 function creatELementHTML(){
     const checkbox_wrapper = document.createElement("div");
     const checkbox_image = document.createElement("div");
