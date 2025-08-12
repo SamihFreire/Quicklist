@@ -24,10 +24,9 @@ window.addEventListener("click", (event) => {
         classAlert(true);
 
         //Definindo delay para remover o alerta da tela
-        setTimeout(() => {
-            alert.classList.remove("alert");
-            alert.classList.add("alert-none");  
-        }, 4000);
+        setTimeout(function () {
+            classAlert(false);
+        }, 3000);
     }
 
     if(event.target.className == "remove-alert") {
