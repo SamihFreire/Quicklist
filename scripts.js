@@ -2,6 +2,7 @@
 const form = document.querySelector("form");
 const input = document.getElementById("item-list");
 const shopping_list = document.querySelector(".shopping-list");
+const alert = document.querySelector(".alert-none")
 
 form.onsubmit = (event) => {
     event.preventDefault();
@@ -18,6 +19,19 @@ window.addEventListener("click", (event) => {
 
     if(event.target.className == "delete-icon") {
         event.target.offsetParent.remove(); //Deleta o nó pai
+
+        //Adiciona o alerta na tela
+        classAlert(true);
+
+        //Definindo delay para remover o alerta da tela
+        setTimeout(() => {
+            alert.classList.remove("alert");
+            alert.classList.add("alert-none");  
+        }, 4000);
+    }
+
+    if(event.target.className == "remove-alert") {
+        classAlert(false);
     }
 })
 
@@ -45,4 +59,16 @@ function creatELementHTML(){
 
     checkbox_wrapper.append(delete_icon);
     delete_icon.classList.add("delete-icon");
+}
+
+function classAlert(active) {
+    if(active){
+        alert.classList.remove("alert-none");
+        alert.classList.add("alert");
+    }
+    else
+    {
+        alert.classList.remove("alert");
+        alert.classList.add("alert-none");
+    }
 }

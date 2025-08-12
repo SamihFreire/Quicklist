@@ -10,12 +10,48 @@ header{
         height: 2.5rem;
     }
 
-    & div {
+    & div:not(.alert) {
         width: 100%;
-        margin-top: 3.875rem;
+        margin-top: 0.50rem;
 
         & h1 {
             line-height: 2.5;
+        }
+    }
+
+    & .alert {
+        display: flex;
+        align-items: center;
+        margin-top: 0.50rem;
+        width: 39.187rem;
+        height: 2.75rem;
+        background-color: var(--color-danger);
+        border-radius: 0.75rem;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding-left: 0.75rem;
+
+        & span {
+            width: 34.187rem;
+            color: var(--always-white);
+        }
+
+        & img[src*="delete-small"] {
+            padding: 1rem;
+        }
+
+        img[src*="delete-small"]:hover {
+            cursor: pointer;
+        }
+    }
+
+    & .alert-none {
+        width: 39.187rem;
+        height: 2.75rem;
+        background-color: var(--background-primary);
+        
+        & span, & img {
+            display: none;
         }
     }
 }
