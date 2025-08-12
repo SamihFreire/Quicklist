@@ -49,9 +49,9 @@ html {
 
 body {
     background-color: var(--background-primary);
-    width: 39.187rem;
+    min-width: 23rem;
     display: grid;
-    margin-inline: auto;
+    justify-content: center;
 }
 
 h1 {

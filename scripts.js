@@ -2,7 +2,7 @@
 const form = document.querySelector("form");
 const input = document.getElementById("item-list");
 const shopping_list = document.querySelector(".shopping-list");
-const alert = document.querySelector(".alert-none")
+const alert = document.querySelector(".alert")
 
 form.onsubmit = (event) => {
     event.preventDefault();
@@ -62,12 +62,10 @@ function creatELementHTML(){
 
 function classAlert(active) {
     if(active){
-        alert.classList.remove("alert-none");
-        alert.classList.add("alert");
+        alert.style.opacity = 1;
     }
     else
     {
-        alert.classList.remove("alert");
-        alert.classList.add("alert-none");
+        alert.style.opacity = 0;
     }
 }
